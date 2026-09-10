@@ -1,0 +1,284 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Projects — Trần Nguyễn Khánh Trình</title>
+<meta name="description" content="Fridgi, an ESP32 smart food-storage system that reads ripening gas; a 3rd-in-the-world VEX VR autonomous run; and the engineering notebook behind the Create Award.">
+<meta name="theme-color" content="#0C0D10">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230C0D10'/%3E%3Ccircle cx='16' cy='16' r='6' fill='%23E43A2B'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="progress" aria-hidden="true"></div>
+<div class="grain" aria-hidden="true"></div>
+
+<header class="nav on-dark">
+  <div class="wrap nav-in">
+    <a class="brand" href="index.html">TRÌNH<i aria-hidden="true"></i><span>50922S</span></a>
+    <button class="burger" type="button" aria-label="Menu" aria-expanded="false"><b></b></button>
+    <nav class="nav-links" aria-label="Main">
+      <a href="index.html">Home</a>
+      <a href="vex.html">VEX</a>
+      <a href="service.html">Service</a>
+      <a class="active" href="projects.html">Projects</a>
+      <a href="awards.html">Awards</a>
+      <a class="nav-cta" href="index.html#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- ================= HERO ================= -->
+  <section class="phero">
+    <div class="phero-bg" aria-hidden="true">
+      <img src="assets/s2425/cad-phase1.jpg" alt="" fetchpriority="high" decoding="async">
+    </div>
+    <div class="wrap">
+      <p class="crumbs"><a href="index.html">Home</a><em>/</em>Projects</p>
+      <h1 class="display">Things built<br>off the field.</h1>
+      <p class="lede">
+        Work that started somewhere other than a competition manual — a food-storage system that reads
+        gas, an autonomous run written entirely in simulation, and the notebook that ties it all together.
+      </p>
+    </div>
+  </section>
+
+  <!-- ================= FRIDGI ================= -->
+  <section class="sec">
+    <div class="wrap">
+      <div class="ch-top">
+        <div>
+          <span class="ch-no" aria-hidden="true">01</span>
+          <p class="label label-red">Fridgi · LSTS F.E.A.T. Week</p>
+          <div class="ch-meta">
+            <span><b>May 2026</b></span>
+            <span><b>Role</b> · Software &amp; hardware developer · Business strategy</span>
+            <span><b>Result</b> · Most Excellent Project, Grade 11</span>
+          </div>
+        </div>
+        <div>
+          <h2 class="display d2 balance">A container that can smell fruit going bad.</h2>
+          <p class="lede mt-m">
+            Fruit doesn't spoil quietly — it releases ethylene as it ripens. Fridgi is an ESP32-based
+            smart container that reads that signal, estimates where the fruit is in its ripening curve,
+            and tells you before you find out by opening the fridge.
+          </p>
+        </div>
+      </div>
+
+      <div class="cols-side mt-l">
+        <div class="sticky-side rv">
+          <p class="label">The build</p>
+          <h3 class="display d4 mt-s balance">Sensors, filtration, and a number people can act on.</h3>
+        </div>
+        <div>
+          <ul class="list rv">
+            <li><b>Sensing.</b> Gas/VOC and humidity sensors inside the container, feeding an ESP32.</li>
+            <li><b>Filtration.</b> An active micro-fan filtration stage, so the system can act on what it measures instead of only reporting it.</li>
+            <li><b>Logic.</b> Real-time monitoring that accounts for environmental noise and for how much fruit is actually in the box — a reading means nothing without knowing the volume producing it.</li>
+            <li><b>Output.</b> Automated storage management plus smartphone alerts, because a sensor nobody reads is not a product.</li>
+            <li><b>Cost.</b> Technical blueprints and a bill of materials targeting a per-unit BOM of roughly US$5, to keep mass production realistic.</li>
+          </ul>
+
+          <div class="pull rv">
+            <p class="statement">What interested me wasn't adding AI or sensors. It was starting from a real problem and asking what technology could actually contribute.</p>
+          </div>
+
+          <p class="body-lg rv">
+            The hardest part wasn't the electronics — it was the signal. Ethylene concentration depends
+            on how much fruit is in the container, how long it's been closed, and what else is in the
+            room. Reading a number is easy. Deciding what that number means is the engineering.
+          </p>
+        </div>
+      </div>
+
+      <div class="beats rv">
+        <div class="beat"><p class="label label-red no-rule">Problem</p><p>Household fruit spoils before anyone notices, and "check it yourself" clearly isn't working.</p></div>
+        <div class="beat"><p class="label label-red no-rule">Approach</p><p>Measure the gas that ripening already produces, rather than asking users to log anything.</p></div>
+        <div class="beat"><p class="label label-red no-rule">Build</p><p>ESP32 + gas/VOC and humidity sensing + active micro-fan filtration + mobile alerts.</p></div>
+        <div class="beat"><p class="label label-red no-rule">Business</p><p>B2C hardware and B2B supermarket SaaS pricing models, projecting 50–60% gross margins.</p></div>
+        <div class="beat"><p class="label label-red no-rule">Outcome</p><p>Most Excellent Project for Grade 11, and presented to a visiting delegation from Taiwan.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= VR CODING ================= -->
+  <section class="sec dark">
+    <div class="wrap">
+      <div class="ch-top">
+        <div>
+          <span class="ch-no" aria-hidden="true">02</span>
+          <p class="label label-acid">VEX V5 VR Coding Online Challenge</p>
+          <div class="ch-meta">
+            <span><b>2025–2026</b></span>
+            <span><b>Discipline</b> · Autonomous programming</span>
+            <span><b>Result</b> · 3rd worldwide</span>
+          </div>
+        </div>
+        <div>
+          <h2 class="display d2 balance">No metal. No excuses.</h2>
+          <p class="lede mt-m">
+            In simulation nothing is loose, nothing is bent, and no bracket is one inch too high. Every
+            point you don't score is a decision you got wrong — which makes it the purest feedback loop
+            in the whole sport.
+          </p>
+        </div>
+      </div>
+
+      <div class="cols2 mt-l">
+        <div class="rv">
+          <p class="label label-acid">What it rewarded</p>
+          <p class="body-lg mt-s">
+            Route planning, sequencing, and knowing exactly what the robot should be doing in every second
+            of the run. There's no driver to recover from a bad plan, so the plan has to be right, and
+            then the plan has to be optimised — repeatedly, against a scoreboard that updates worldwide.
+          </p>
+        </div>
+        <div class="rv rv-d1">
+          <p class="label label-acid">What it gave back</p>
+          <p class="body-lg mt-s">
+            This is where the Vietnam Signature Event method came from. Plan, simulate, adapt — I'd
+            already spent a season doing exactly that in VR before we needed it on a real field with
+            almost no time left.
+          </p>
+        </div>
+      </div>
+
+      <div class="rv mt-l">
+        <p class="statement wide">Ranked 3rd in the world — and it's the project that taught me to treat a route like a design, not a script.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= NOTEBOOK ================= -->
+  <section class="sec">
+    <div class="wrap">
+      <div class="ch-top">
+        <div>
+          <span class="ch-no" aria-hidden="true">03</span>
+          <p class="label label-red">Engineering notebook</p>
+          <div class="ch-meta">
+            <span><b>2024 – present</b></span>
+            <span><b>Role</b> · Contributor and maintainer</span>
+            <span><b>Recognition</b> · Create Award, Nationals 2026</span>
+          </div>
+        </div>
+        <div>
+          <h2 class="display d2 balance">The record of everything I believed and was wrong about.</h2>
+          <p class="lede mt-m">
+            The notebook isn't documentation written after the fact. It's the only place a rebuild
+            argument survives contact with four people who all liked the old robot.
+          </p>
+        </div>
+      </div>
+
+      <div class="cols-side mt-l">
+        <div class="sticky-side rv">
+          <p class="label">What goes in it</p>
+        </div>
+        <div>
+          <ul class="list rv">
+            <li><b>The decision, not just the outcome.</b> What we chose, what we rejected, and the reason at the time — including reasons that later looked stupid.</li>
+            <li><b>Measurements.</b> Cycle times, failure counts, which match a part broke in. Numbers end arguments that opinions extend.</li>
+            <li><b>Dead ends.</b> The mechanisms that didn't work are more useful six months later than the ones that did.</li>
+            <li><b>One change at a time.</b> The pit rule from Taiwan, written down so it survives the pressure that makes people abandon it.</li>
+          </ul>
+          <p class="body-lg rv mt-m">
+            At the 2026 National Championship this is what earned the <strong>Create Award</strong> —
+            recognition for the engineering process rather than the day's scores. It's the result I'm
+            most attached to, because it's the only one that judges how I think rather than how the
+            robot performed on one Saturday.
+          </p>
+          <div class="btns rv">
+            <a class="btn" href="vex-2025-2026.html">See the process in action <span class="ar" aria-hidden="true">&rarr;</span></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= SKILLS ================= -->
+  <section class="sec dark ink-2">
+    <div class="wrap">
+      <div class="head rv">
+        <div>
+          <p class="label label-acid">Toolkit</p>
+          <h2 class="display d2 mt-s">What I build with.</h2>
+        </div>
+        <p class="body-lg">
+          Listed honestly: some of these I'm fluent in, some I've used enough to know what I don't
+          understand yet. Both are useful to know about a person.
+        </p>
+      </div>
+
+      <div class="cols2 rv">
+        <div>
+          <p class="label label-acid">Programming &amp; control</p>
+          <div class="chips">
+            <span class="chip on">C++</span><span class="chip on">Python</span><span class="chip on">PROS</span>
+            <span class="chip on">LemLib</span><span class="chip">PID control</span><span class="chip">Odometry</span>
+            <span class="chip">Path planning</span><span class="chip">IMU</span><span class="chip">Rotation sensors</span>
+            <span class="chip">GPS</span><span class="chip">HTML / CSS</span>
+          </div>
+          <p class="note mt-s">Exposure to computer vision, machine learning and object-detection concepts — enough to know how much I still have to learn.</p>
+        </div>
+        <div>
+          <p class="label label-acid">Hardware &amp; design</p>
+          <div class="chips">
+            <span class="chip on">Onshape</span><span class="chip on">Tinkercad</span><span class="chip">ESP32</span>
+            <span class="chip">Gas / VOC sensing</span><span class="chip">Mechanical design</span>
+            <span class="chip">Sensor integration</span><span class="chip">Premiere Pro</span>
+            <span class="chip">After Effects</span><span class="chip">Canva</span>
+          </div>
+          <p class="note mt-s">Plus the unglamorous ones: cutting straight, wiring tidily, and building things you can take apart again.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <p class="label label-acid">Next</p>
+    <h2 class="display big mt-s"><a href="awards.html">The full<br>record &rarr;</a></h2>
+    <div class="foot-grid">
+      <div>
+        <h4>Portfolio</h4>
+        <a href="index.html">Home</a>
+        <a href="vex.html">VEX Robotics</a>
+        <a href="service.html">Service Learning</a>
+        <a href="projects.html">Projects</a>
+        <a href="awards.html">Awards</a>
+      </div>
+      <div>
+        <h4>Seasons</h4>
+        <a href="vex-2024-2025.html">2024–2025 · High Stakes</a>
+        <a href="vex-2025-2026.html">2025–2026 · Push Back</a>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <a href="mailto:tommykhanhtrinh@gmail.com">tommykhanhtrinh@gmail.com</a>
+        <p>Lawrence S. Ting School<br>Hồ Chí Minh City, Vietnam</p>
+      </div>
+      <div>
+        <h4>Team</h4>
+        <p>VERTEX 50922S<br>VEX V5 Robotics Competition</p>
+      </div>
+    </div>
+    <div class="foot-base">
+      <span>© <span data-year>2026</span> Trần Nguyễn Khánh Trình</span>
+      <span>Build · Break · Rebuild</span>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
